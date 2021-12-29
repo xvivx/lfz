@@ -1,0 +1,11 @@
+{
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "options": {
+        "singleQuote": true
+      }
+    }
+  ]
+}

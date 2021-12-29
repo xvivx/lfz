@@ -1,17 +1,27 @@
 <template>
   <v-app>
     <v-app-bar app color="primary" dark>
-      <v-app-bar-nav-icon class="hidden-sm-and-up" @click="showMobileNavMenus = true" />
-      <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
-        <span>LFZ</span>
-      </v-toolbar-title>
+      <v-app-bar-nav-icon
+        class="hidden-sm-and-up"
+        absolute
+        @click="showMobileNavMenus = true"
+      />
+      <v-container class="d-flex justify-center mx-auto">
+        <v-toolbar-title>LFZ</v-toolbar-title>
+      </v-container>
     </v-app-bar>
 
     <v-main>
       <router-view />
     </v-main>
 
-    <v-navigation-drawer v-model="showMobileNavMenus" bottom fixed :mobile-breakpoint="500" class="hidden-sm-and-up">
+    <v-navigation-drawer
+      v-model="showMobileNavMenus"
+      bottom
+      fixed
+      :mobile-breakpoint="500"
+      class="hidden-sm-and-up"
+    >
       <v-list dense>
         <v-list-item link to="/">
           <v-list-item-content>
@@ -27,7 +37,9 @@
     </v-navigation-drawer>
 
     <v-footer padless color="primary" dark>
-      <v-col class="lighten-2 py-4 text-center font-weight-bold" cols="12">CopyRight©2021</v-col>
+      <v-col class="lighten-2 py-4 text-center font-weight-bold" cols="12"
+        >CopyRight©2021</v-col
+      >
     </v-footer>
   </v-app>
 </template>
