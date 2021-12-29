@@ -1,6 +1,10 @@
 <template>
   <div>
-    <v-carousel cycle show-arrows-on-hover height="56.25vw">
+    <v-carousel
+      cycle
+      show-arrows-on-hover
+      :height="$vuetify.breakpoint.smOnly ? '56.25vw' : 600"
+    >
       <v-carousel-item
         v-for="slide in slides"
         :key="slide"

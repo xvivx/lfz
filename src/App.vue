@@ -6,7 +6,7 @@
         absolute
         @click="showMobileNavMenus = true"
       />
-      <v-container class="d-flex justify-center mx-auto">
+      <v-container class="d-flex justify-center justify-md-start mx-auto">
         <v-toolbar-title>LFZ</v-toolbar-title>
       </v-container>
     </v-app-bar>
