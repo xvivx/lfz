@@ -1,5 +1,3 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <div class="my-10 text-center text-h3">陈元，你好</div>
 </template>
