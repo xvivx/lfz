@@ -3,7 +3,7 @@
     <v-carousel
       cycle
       show-arrows-on-hover
-      :height="$vuetify.breakpoint.mobile ? '56.25vw' : 600"
+      :height="$vuetify.breakpoint.mobile ? '60vw' : 600"
     >
       <v-carousel-item
         v-for="slide in slides"
@@ -14,7 +14,7 @@
     <v-container class="pt-10">
       <v-row class="mb-15" align-sm="center">
         <v-col
-          class="text-h5 text-md-h3 font-weight-medium"
+          class="text-h5 text-md-h4 text-lg-h3 font-weight-medium"
           cols="12"
           sm="8"
           lg="9"
@@ -23,12 +23,13 @@
         </v-col>
         <v-col ccols="12" sm="4" lg="3">
           <v-btn
-            class="d-md-inline-flex py-10 text-h6 font-weight-bold"
+            class="d-md-inline-flex py-10 text-h6 text-lg-h4 font-weight-bold"
             block
+            color="primary"
             elevation="10"
             to="/products"
           >
-            点击了解详情
+            前往了解详情
           </v-btn>
         </v-col>
       </v-row>

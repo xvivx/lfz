@@ -1,4 +1,3 @@
-import '@mdi/font/css/materialdesignicons.css';
 import Vue from 'vue';
 import Vuetify from 'vuetify/lib/framework';
 import zhHans from 'vuetify/src/locale/zh-Hans';
@@ -27,7 +26,7 @@ export default new Vuetify({
     current: 'zhHans',
   },
   icons: {
-    iconfont: 'mdi',
+    iconfont: 'mdiSvg',
   },
   breakpoint: {
     mobileBreakpoint: 'md',

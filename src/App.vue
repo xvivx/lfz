@@ -7,7 +7,7 @@
         @click="showMobileNavMenus = true"
       />
       <v-container class="d-flex justify-center justify-md-start mx-auto">
-        <v-toolbar-title>徕泽丰</v-toolbar-title>
+        <v-toolbar-title class="font-weight-bold">徕泽丰</v-toolbar-title>
       </v-container>
     </v-app-bar>
 
@@ -40,6 +40,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { mdiHome, mdiLightbulb, mdiHandshake } from '@mdi/js';
 
 export default Vue.extend({
   name: 'App',
@@ -49,17 +50,17 @@ export default Vue.extend({
     showMobileNavMenus: false,
     navs: [
       {
-        icon: 'mdi-home',
+        icon: mdiHome,
         text: '首页',
         link: '/',
       },
       {
-        icon: 'mdi-lightbulb',
+        icon: mdiLightbulb,
         text: '产品案例',
         link: '/products',
       },
       {
-        icon: 'mdi-handshake',
+        icon: mdiHandshake,
         text: '联系我们',
         link: '/about',
       },
@@ -67,3 +68,14 @@ export default Vue.extend({
   }),
 });
 </script>
+
+<style lang="scss">
+$base-font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC',
+  'Helvetica Neue', STHeiti, 'Microsoft Yahei', Tahoma, Simsun, sans-serif;
+.v-application {
+  [class*='text-'] {
+    font-family: $base-font-family !important;
+  }
+  font-family: $base-font-family !important;
+}
+</style>
