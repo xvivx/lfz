@@ -1,13 +1,12 @@
 declare module 'vuetify/lib/framework' {
-  import Vuetify from 'vuetify'
-  export default Vuetify
+  import Vuetify from 'vuetify';
+  export default Vuetify;
 }
 
-declare module "*.vue" {
-  import Vue from "vue";
+declare module '*.vue' {
+  import Vue from 'vue';
   export default Vue;
 }
-
 
 declare module '*.avif' {
   const src: string;
@@ -40,16 +39,16 @@ declare module '*.png' {
 }
 
 declare module '*.webp' {
-    const src: string;
-    export default src;
+  const src: string;
+  export default src;
 }
 
 declare module '*.svg' {
   import * as React from 'react';
 
-  export const ReactComponent: React.FunctionComponent<React.SVGProps<
-    SVGSVGElement
-  > & { title?: string }>;
+  export const ReactComponent: React.FunctionComponent<
+    React.SVGProps<SVGSVGElement> & { title?: string }
+  >;
 
   const src: string;
   export default src;
