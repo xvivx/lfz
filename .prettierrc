@@ -1,10 +1,12 @@
 {
   "singleQuote": true,
+  "printWidth": 120,
   "htmlWhitespaceSensitivity": "ignore",
   "overrides": [
     {
       "files": ["*.vue"],
       "options": {
+        "printWidth": 120,
         "singleQuote": true
       }
     }

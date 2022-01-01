@@ -8,16 +8,17 @@ declare module '*.vue' {
 declare global {
   namespace JSX {
     // tslint:disable no-empty-interface
-    interface Element extends VNode {}
+    type Element = VNode;
     // tslint:disable no-empty-interface
-    interface ElementClass extends Vue {}
+    type ElementClass = Vue;
     interface IntrinsicElements {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       [elem: string]: any;
     }
   }
 }
 
 declare module 'vuetify/lib/framework' {
-  import Vuetify from 'vuetify'
-  export default Vuetify
+  import Vuetify from 'vuetify';
+  export default Vuetify;
 }

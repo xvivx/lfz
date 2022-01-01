@@ -4,8 +4,7 @@ import Home from '../views/home.vue';
 
 Vue.use(VueRouter);
 
-const About = () =>
-  import(/* webpackChunkName: "about" */ '../views/about.vue');
+const About = () => import(/* webpackChunkName: "about" */ '../views/about.vue');
 
 const routes: Array<RouteConfig> = [
   {

@@ -1,24 +1,11 @@
 <template>
   <div>
-    <v-carousel
-      cycle
-      show-arrows-on-hover
-      :height="$vuetify.breakpoint.mobile ? '60vw' : 600"
-    >
-      <v-carousel-item
-        v-for="slide in slides"
-        :key="slide"
-        :src="slide"
-      ></v-carousel-item>
+    <v-carousel cycle show-arrows-on-hover :height="$vuetify.breakpoint.mobile ? '60vw' : 600">
+      <v-carousel-item v-for="slide in slides" :key="slide" :src="slide"></v-carousel-item>
     </v-carousel>
     <v-container class="pt-10">
       <v-row class="mb-15" align-sm="center">
-        <v-col
-          class="text-h5 text-md-h4 text-lg-h3 font-weight-medium"
-          cols="12"
-          sm="8"
-          lg="9"
-        >
+        <v-col class="text-h5 text-md-h4 text-lg-h3 font-weight-medium" cols="12" sm="8" lg="9">
           金属增材制造的工业解决方案
         </v-col>
         <v-col ccols="12" sm="4" lg="3">
@@ -40,10 +27,9 @@
         </v-col>
 
         <v-col cols="12" md="6" class="text--primary text-justify">
-          <span class="font-weight-bold text-md-h5 text-lg-h4">
-            苏州徕泽丰材料科技有限公司
-          </span>
-          成立于2020年4月，是一家专业为客户提供包括从材料定制、产品设计、工艺开发、批量制造的金属增材制造服务公司。我们经验丰富的技术团队来自于北京航空航天大学，是中国最早研究增材制造技术的研究机构之一。我们的愿景是推动金属增材制造技术成为真正低成本、稳定、可大批量生产的工业制造技术，建立一个高效、数字化、柔性化的工业互联网制造平台。
+          <span class="font-weight-bold text-md-h5 text-lg-h4">苏州徕泽丰材料科技有限公司</span>
+          成立于2020年4月，是一家专业为客户提供包括从材料定制、产品设计、工艺开发、批量制造的金属增材制造服务公司。我们经验丰富的技术团队来自于北京航空航天大学，
+          是中国最早研究增材制造技术的研究机构之一。我们的愿景是推动金属增材制造技术成为真正低成本、稳定、可大批量生产的工业制造技术，建立一个高效、数字化、柔性化的工业互联网制造平台。
         </v-col>
       </v-row>
     </v-container>
