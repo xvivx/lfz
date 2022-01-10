@@ -5,13 +5,13 @@
         <v-icon>{{ appBarIcons[Number(showMobileNavMenus)] }}</v-icon>
       </v-app-bar-nav-icon>
       <v-container class="flex d-flex justify-center justify-md-start mx-auto">
-        <v-img class="flex-grow-0" width="100px" contain src="@/assets/logo.png"></v-img>
-        <v-flex class="d-none d-sm-flex align-center">
-          <v-btn class="ml-10" color="#F5C524" depressed v-for="nav in navs" :key="nav.link" :to="nav.link">
+        <v-img class="flex-grow-0" width="120px" contain src="@/assets/logo.png"></v-img>
+        <v-flex class="d-none d-md-flex align-center">
+          <v-btn class="ml-10 body-1" color="#F5C524" depressed v-for="nav in navs" :key="nav.link" :to="nav.link">
             {{ nav.text }}
           </v-btn>
         </v-flex>
-        <v-app-bar-nav-icon class="d-none d-sm-block" @click="toggleTheme">
+        <v-app-bar-nav-icon class="d-none d-md-block" @click="toggleTheme">
           <v-icon>{{ themeIcons[Number($vuetify.theme.dark)] }}</v-icon>
         </v-app-bar-nav-icon>
       </v-container>
@@ -107,5 +107,9 @@ $base-font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica 
     font-family: $base-font-family !important;
   }
   font-family: $base-font-family !important;
+
+  .container {
+    max-width: 1200px !important;
+  }
 }
 </style>
