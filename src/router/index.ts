@@ -4,7 +4,8 @@ import Home from '../views/home.vue';
 
 Vue.use(VueRouter);
 
-const About = () => import(/* webpackChunkName: "about" */ '../views/about.vue');
+const Concat = () => import(/* webpackChunkName: "concat" */ '../views/concat.vue');
+const Solution = () => import(/* webpackChunkName: "solution" */ '../views/solution.vue');
 
 const routes: Array<RouteConfig> = [
   {
@@ -13,16 +14,17 @@ const routes: Array<RouteConfig> = [
     component: Home,
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: About,
+    path: '/solution',
+    component: Solution,
+  },
+  {
+    path: '/concat',
+    name: 'concat',
+    component: Concat,
   },
   {
     path: '*',
-    component: About,
+    component: Home,
   },
 ];
 
@@ -30,6 +32,11 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes,
+});
+
+router.beforeEach((_, __, next) => {
+  window.scrollTo(0, 0);
+  next();
 });
 
 export default router;

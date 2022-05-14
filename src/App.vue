@@ -1,18 +1,18 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary">
+    <v-app-bar app color="primary" :height="!$vuetify.breakpoint.mobile ? 100 : 64">
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="showMobileNavMenus = true">
         <v-icon>{{ appBarIcons[Number(showMobileNavMenus)] }}</v-icon>
       </v-app-bar-nav-icon>
-      <v-container class="flex d-flex justify-center justify-md-start mx-auto">
+      <v-container class="d-flex align-center justify-center justify-md-start mx-auto">
         <v-img class="flex-grow-0" width="120px" contain src="@/assets/logo.png"></v-img>
         <v-flex class="d-none d-md-flex align-center">
-          <v-btn class="ml-10 body-1" color="#F5C524" depressed v-for="nav in navs" :key="nav.link" :to="nav.link">
+          <v-btn class="ml-12 pa-8 body-1 primary" depressed v-for="nav in navs" :key="nav.link" :to="nav.link">
             {{ nav.text }}
           </v-btn>
         </v-flex>
         <v-app-bar-nav-icon class="d-none d-md-block" @click="toggleTheme">
-          <v-icon>{{ themeIcons[Number($vuetify.theme.dark)] }}</v-icon>
+          <v-icon color="white">{{ themeIcons[Number($vuetify.theme.dark)] }}</v-icon>
         </v-app-bar-nav-icon>
       </v-container>
 
@@ -22,7 +22,9 @@
     </v-app-bar>
 
     <v-main>
-      <router-view />
+      <keep-alive>
+        <router-view />
+      </keep-alive>
     </v-main>
 
     <v-navigation-drawer v-model="showMobileNavMenus" bottom fixed>
@@ -48,16 +50,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import {
-  mdiHome,
-  mdiLightbulb,
-  mdiHandshake,
-  mdiNewBox,
-  mdiClose,
-  mdiMenu,
-  mdiWeatherNight,
-  mdiWhiteBalanceSunny,
-} from '@mdi/js';
+import { mdiHome, mdiLightbulb, mdiHandshake, mdiClose, mdiMenu, mdiWeatherNight, mdiWhiteBalanceSunny } from '@mdi/js';
 
 export default Vue.extend({
   name: 'App',
@@ -77,15 +70,15 @@ export default Vue.extend({
         text: '解决方案',
         link: '/solution',
       },
-      {
-        icon: mdiNewBox,
-        text: '新闻动态',
-        link: '/news',
-      },
+      // {
+      //   icon: mdiNewBox,
+      //   text: '新闻动态',
+      //   link: '/news',
+      // },
       {
         icon: mdiHandshake,
         text: '联系我们',
-        link: '/about',
+        link: '/concat',
       },
     ],
   }),

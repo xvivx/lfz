@@ -16,6 +16,13 @@ declare global {
       [elem: string]: any;
     }
   }
+
+  interface Window {
+    BMap: any;
+    BMapGL: any;
+    BMapLib: any;
+    onBMapCallback: () => void;
+  }
 }
 
 declare module 'vuetify/lib/framework' {
